@@ -1,18 +1,29 @@
-# Salesforce DX Project: Next Steps
+# LWC Util Files
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+We are starting this respository to conslidate JS code that is frequently recreated between projects.
+This can be a consolidate place for util methods that can be imported and reused going forward.
+We have the ability to further build out this repositroy as time goes on and keep adding the latest and greatest to it.
 
-## How Do You Plan to Deploy Your Changes?
+## 🔨 Usage
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+1. Install the unmanaged package into your target org
+2. Import a method into your LWC to use
+    1. Ex: ``import { getErrorMessage } from 'c/utils'``
 
-## Configure Your Salesforce DX Project
+## ✨Features
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### toast.js
 
-## Read All About It
+- getErrorMessage
+    - Send the error received and it will generate an error message for you
+    - Can be used when calling apex methods, wired methods, etc...
+- displayError, displaySuccess, displayToast
+    - Ability to choose which type of toast to display and the associated method
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### community.js
+
+- getBaseCommunityPath
+    - Ability to get the base path of community url (Ex: ``https://[custom domain].cs60.force.com/s/``)
+
+
+** Powered by ** [Callaway Cloud Consulting](https://www.callawaycloud.com/)
